@@ -1,0 +1,18 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two Sets, All Dates icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1020"/>
+      <stop offset="100%" stop-color="#111A32"/>
+    </linearGradient>
+    <linearGradient id="cube" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1F2A46"/>
+      <stop offset="100%" stop-color="#151D33"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)"/>
+  <rect x="42" y="56" width="78" height="144" rx="16" fill="url(#cube)" stroke="#5A8BFF" stroke-opacity="0.5"/>
+  <rect x="136" y="56" width="78" height="144" rx="16" fill="url(#cube)" stroke="#9A79FF" stroke-opacity="0.55"/>
+  <text x="81" y="138" fill="#EAF0FF" font-size="58" font-family="Sora, sans-serif" font-weight="600" text-anchor="middle">3</text>
+  <text x="175" y="138" fill="#EAF0FF" font-size="58" font-family="Sora, sans-serif" font-weight="600" text-anchor="middle">1</text>
+  <text x="176" y="188" fill="#B8C7FF" font-size="21" font-family="Space Grotesk, sans-serif" text-anchor="middle">6↻9</text>
+</svg>
