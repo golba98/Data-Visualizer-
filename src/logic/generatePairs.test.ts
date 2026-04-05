@@ -26,6 +26,8 @@ describe("generateOrderedPairs", () => {
 
   it("never emits an impossible pair family", () => {
     const pairs = generateOrderedPairs([31]);
-    expect(pairs.every((entry) => entry.pairFamily === "A×B*" || entry.pairFamily === "B*×A")).toBe(true);
+    expect(pairs.every((entry) => entry.pairFamily === "A×B*" || entry.pairFamily === "B*×A")).toBe(
+      true
+    );
   });
 });

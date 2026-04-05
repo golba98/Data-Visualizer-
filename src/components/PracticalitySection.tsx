@@ -8,7 +8,8 @@ export default function PracticalitySection() {
       <div>
         <h2 className="section-title">Practical Interpretation</h2>
         <p className="section-subtitle mt-2">
-          The proof directly matches physical date displays built from two cubes or tiles: choose one for tens and the other for units, then swap roles when needed.
+          The proof directly matches physical date displays built from two cubes or tiles: choose
+          one for tens and the other for units, then swap roles when needed.
         </p>
       </div>
 

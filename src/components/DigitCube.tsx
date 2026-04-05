@@ -12,17 +12,17 @@ interface DigitCubeProps {
 const sizeClasses: Record<NonNullable<DigitCubeProps["size"]>, string> = {
   sm: "h-10 w-10 text-lg",
   md: "h-14 w-14 text-2xl",
-  lg: "h-20 w-20 text-3xl"
+  lg: "h-20 w-20 text-3xl",
 };
 
 const sourceSetClasses: Record<SourceSet, string> = {
   A: "ring-1 ring-cyan-400/50 hover:ring-cyan-300/70 hover:ring-2",
-  "B*": "ring-1 ring-violet-400/50 hover:ring-violet-300/70 hover:ring-2"
+  "B*": "ring-1 ring-violet-400/50 hover:ring-violet-300/70 hover:ring-2",
 };
 
 const sourceSetGlow: Record<SourceSet, string> = {
   A: "hover:glow-cyan",
-  "B*": "hover:glow-violet"
+  "B*": "hover:glow-violet",
 };
 
 export default function DigitCube({
@@ -30,7 +30,7 @@ export default function DigitCube({
   sourceSet,
   rotated = false,
   size = "md",
-  highlight = false
+  highlight = false,
 }: DigitCubeProps) {
   return (
     <div
@@ -43,12 +43,15 @@ export default function DigitCube({
       aria-label={rotated ? `digit ${digit}, produced by rotating 6` : `digit ${digit}`}
       role="img"
     >
-      <span className="leading-none transition-all duration-300 group-hover:scale-110">{digit}</span>
+      <span className="leading-none transition-all duration-300 group-hover:scale-110">
+        {digit}
+      </span>
       {sourceSet ? (
-        <span className="absolute -bottom-2 rounded-full px-2 py-0.5 text-[10px] uppercase tracking-wide transition-all duration-300 elevated-sm group-hover:elevated-md"
+        <span
+          className="absolute -bottom-2 rounded-full px-2 py-0.5 text-[10px] uppercase tracking-wide transition-all duration-300 elevated-sm group-hover:elevated-md"
           style={{
-            backgroundColor: 'rgba(15, 23, 42, 0.95)',
-            color: 'var(--muted)'
+            backgroundColor: "rgba(15, 23, 42, 0.95)",
+            color: "var(--muted)",
           }}
         >
           {sourceSet}
