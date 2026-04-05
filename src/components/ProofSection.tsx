@@ -7,8 +7,8 @@ export default function ProofSection() {
       <div>
         <h2 className="section-title">Proof by Cases</h2>
         <p className="section-subtitle mt-2">
-          Let A = {"{"}0,1,2,3,4,5{"}"}, and let B* = {"{"}0,1,2,6,7,8,9{"}"} where 9 is a rotated 6.
-          Every date xy is valid if it appears in (A x B*) U (B* x A).
+          Let A = {"{"}0,1,2,3,4,5{"}"}, and let B* = {"{"}0,1,2,6,7,8,9{"}"} where 9 is a rotated
+          6. Every date xy is valid if it appears in (A x B*) U (B* x A).
         </p>
       </div>
 
@@ -32,7 +32,9 @@ export default function ProofSection() {
             <p className="mt-3 rounded-xl glass-light elevated-sm px-3 py-2 text-xs text-slate-300">
               {proofCase.notation}
             </p>
-            <p className="mt-2 text-xs uppercase tracking-[0.14em] text-slate-400">Examples: {proofCase.examples.join(", ")}</p>
+            <p className="mt-2 text-xs uppercase tracking-[0.14em] text-slate-400">
+              Examples: {proofCase.examples.join(", ")}
+            </p>
           </motion.article>
         ))}
       </div>

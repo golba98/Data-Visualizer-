@@ -5,8 +5,14 @@ import { SET_A, SET_B } from "../data/digitSets";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden rounded-3xl glass-heavy elevated-2xl px-6 py-14 md:px-10">
-      <div className="hero-glow h-56 w-56 bg-blue-500/45 -left-16 -top-16 animate-pulse" style={{ animationDuration: "4s" }} />
-      <div className="hero-glow h-64 w-64 bg-violet-500/45 -right-14 -bottom-14 animate-pulse" style={{ animationDuration: "5s", animationDelay: "1s" }} />
+      <div
+        className="hero-glow h-56 w-56 bg-blue-500/45 -left-16 -top-16 animate-pulse"
+        style={{ animationDuration: "4s" }}
+      />
+      <div
+        className="hero-glow h-64 w-64 bg-violet-500/45 -right-14 -bottom-14 animate-pulse"
+        style={{ animationDuration: "5s", animationDelay: "1s" }}
+      />
 
       <div className="relative grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <motion.div
@@ -22,7 +28,8 @@ export default function Hero() {
             Two Sets, <span className="text-accent text-glow">All Dates</span>
           </h1>
           <p className="max-w-2xl text-base text-muted md:text-lg">
-            A formal and visual proof that two digit sets, with one rotational trick, can display every day from 01 through 31.
+            A formal and visual proof that two digit sets, with one rotational trick, can display
+            every day from 01 through 31.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
@@ -30,14 +37,18 @@ export default function Hero() {
               className="group relative overflow-hidden rounded-xl border border-transparent bg-blue-500/20 px-5 py-3 text-sm font-medium text-blue-100 transition-all duration-300 hover:scale-105 gradient-border-blue hover:glow-blue"
             >
               Explore the proof
-              <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+              <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
             </a>
             <a
               href="#visualization"
               className="group rounded-xl border border-slate-400/35 glass-light px-5 py-3 text-sm font-medium text-slate-100 transition-all duration-300 hover-lift hover:border-slate-300/50"
             >
               Try the visualization
-              <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">↓</span>
+              <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
+                ↓
+              </span>
             </a>
           </div>
         </motion.div>
@@ -65,7 +76,8 @@ export default function Hero() {
             </div>
           </div>
           <p className="rounded-xl border border-violet-400/35 bg-violet-500/12 px-3 py-2 text-sm text-violet-200 elevated-sm">
-            Rotation rule: the digit <strong>6</strong> on set B may be turned upside down and used as <strong>9</strong>.
+            Rotation rule: the digit <strong>6</strong> on set B may be turned upside down and used
+            as <strong>9</strong>.
           </p>
         </motion.div>
       </div>

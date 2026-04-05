@@ -6,7 +6,21 @@ export default function Footer() {
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 md:flex-row md:items-center md:justify-between">
           <p className="font-display text-slate-200">Two Sets, All Dates</p>
           <p>
-            Explore the <a href="#proof" className="transition-all duration-300 hover:text-blue-300 hover:underline">proof summary</a> and <a href="#practicality" className="transition-all duration-300 hover:text-blue-300 hover:underline">practical interpretation</a>. Full docs are included in the repository.
+            Explore the{" "}
+            <a
+              href="#proof"
+              className="transition-all duration-300 hover:text-blue-300 hover:underline"
+            >
+              proof summary
+            </a>{" "}
+            and{" "}
+            <a
+              href="#practicality"
+              className="transition-all duration-300 hover:text-blue-300 hover:underline"
+            >
+              practical interpretation
+            </a>
+            . Full docs are included in the repository.
           </p>
         </div>
       </div>

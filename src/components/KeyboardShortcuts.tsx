@@ -3,10 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 interface KeyboardShortcutsProps {
   onNavigate: (direction: "prev" | "next") => void;
-  onToggleAnimation: () => void;
 }
 
-export default function KeyboardShortcuts({ onNavigate, onToggleAnimation }: KeyboardShortcutsProps) {
+export default function KeyboardShortcuts({ onNavigate }: KeyboardShortcutsProps) {
   const [showHelp, setShowHelp] = useState(false);
 
   useEffect(() => {
@@ -27,14 +26,7 @@ export default function KeyboardShortcuts({ onNavigate, onToggleAnimation }: Key
           e.preventDefault();
           onNavigate("next");
           break;
-        case "a":
-          e.preventDefault();
-          onToggleAnimation();
-          break;
-        case "?":
-          e.preventDefault();
-          setShowHelp(!showHelp);
-          break;
+
         case "Escape":
           if (showHelp) {
             e.preventDefault();
@@ -46,7 +38,7 @@ export default function KeyboardShortcuts({ onNavigate, onToggleAnimation }: Key
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onNavigate, onToggleAnimation, showHelp]);
+  }, [onNavigate, showHelp]);
 
   return (
     <>
@@ -82,7 +74,12 @@ export default function KeyboardShortcuts({ onNavigate, onToggleAnimation }: Key
                   aria-label="Close"
                 >
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
                 </button>
               </div>
@@ -90,7 +87,6 @@ export default function KeyboardShortcuts({ onNavigate, onToggleAnimation }: Key
               <div className="space-y-3">
                 <ShortcutRow keys={["←", "h"]} description="Previous date" />
                 <ShortcutRow keys={["→", "l"]} description="Next date" />
-                <ShortcutRow keys={["a"]} description="Toggle animations" />
                 <ShortcutRow keys={["?"]} description="Show this help" />
                 <ShortcutRow keys={["Esc"]} description="Close dialogs" />
               </div>

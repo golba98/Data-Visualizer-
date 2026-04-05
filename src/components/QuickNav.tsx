@@ -10,7 +10,7 @@ const notableDates = [
   { day: 9, label: "Rotation" },
   { day: 19, label: "Rotation" },
   { day: 29, label: "Rotation" },
-  { day: 31, label: "Last" }
+  { day: 31, label: "Last" },
 ];
 
 export default function QuickNav({ onSelectDay }: QuickNavProps) {
@@ -32,7 +32,9 @@ export default function QuickNav({ onSelectDay }: QuickNavProps) {
             className="group relative rounded-lg border glass-light elevated-sm px-3 py-2 text-sm transition-all duration-300 hover:border-blue-400/60 hover-lift hover:glow-blue"
           >
             <span className="font-display font-semibold text-text">{formatDate(date.day)}</span>
-            <span className="ml-2 text-xs text-slate-400 group-hover:text-blue-300 transition-colors">{date.label}</span>
+            <span className="ml-2 text-xs text-slate-400 group-hover:text-blue-300 transition-colors">
+              {date.label}
+            </span>
           </button>
         ))}
       </div>

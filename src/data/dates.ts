@@ -9,5 +9,5 @@ export interface DateEntry {
 
 export const DATE_ENTRIES: DateEntry[] = ALL_DATES.map((day) => ({
   day,
-  label: formatDate(day)
+  label: formatDate(day),
 }));

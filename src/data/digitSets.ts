@@ -11,5 +11,5 @@ export type SetName = "A" | "B" | "B*";
 export const SET_LABELS: Record<SetName, string> = {
   A: "{0, 1, 2, 3, 4, 5}",
   B: "{0, 1, 2, 6, 7, 8}",
-  "B*": "{0, 1, 2, 6, 7, 8, 9}"
+  "B*": "{0, 1, 2, 6, 7, 8, 9}",
 };

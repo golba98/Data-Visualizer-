@@ -35,7 +35,7 @@
     @apply border border-border rounded-2xl;
     box-shadow: var(--shadow-md), var(--inner-glow-light);
   }
-  
+
   .glass-medium {
     background-color: var(--glass-medium);
     backdrop-filter: blur(var(--blur-medium));
@@ -43,7 +43,7 @@
     @apply border border-border rounded-2xl;
     box-shadow: var(--shadow-lg), var(--inner-glow-light);
   }
-  
+
   .glass-heavy {
     background-color: var(--glass-heavy);
     backdrop-filter: blur(var(--blur-heavy));
@@ -51,7 +51,7 @@
     @apply border border-border rounded-2xl;
     box-shadow: var(--shadow-xl), var(--inner-glow-strong);
   }
-  
+
   .glass-panel {
     background-color: var(--glass-medium);
     backdrop-filter: blur(var(--blur-medium));
@@ -64,19 +64,19 @@
   .elevated-sm {
     box-shadow: var(--shadow-sm);
   }
-  
+
   .elevated-md {
     box-shadow: var(--shadow-md);
   }
-  
+
   .elevated-lg {
     box-shadow: var(--shadow-lg);
   }
-  
+
   .elevated-xl {
     box-shadow: var(--shadow-xl);
   }
-  
+
   .elevated-2xl {
     box-shadow: var(--shadow-2xl);
   }
@@ -85,15 +85,15 @@
   .glow-blue {
     box-shadow: var(--glow-blue);
   }
-  
+
   .glow-violet {
     box-shadow: var(--glow-violet);
   }
-  
+
   .glow-cyan {
     box-shadow: var(--glow-cyan);
   }
-  
+
   .glow-emerald {
     box-shadow: var(--glow-emerald);
   }
@@ -102,39 +102,44 @@
   .gradient-border-blue {
     position: relative;
     border: 1px solid transparent;
-    background-image: linear-gradient(var(--glass-medium), var(--glass-medium)),
-                      linear-gradient(135deg, rgba(110, 168, 255, 0.4), rgba(73, 84, 255, 0.2));
+    background-image:
+      linear-gradient(var(--glass-medium), var(--glass-medium)),
+      linear-gradient(135deg, rgba(110, 168, 255, 0.4), rgba(73, 84, 255, 0.2));
     background-origin: border-box;
     background-clip: padding-box, border-box;
   }
-  
+
   .gradient-border-violet {
     position: relative;
     border: 1px solid transparent;
-    background-image: linear-gradient(var(--glass-medium), var(--glass-medium)),
-                      linear-gradient(135deg, rgba(143, 116, 255, 0.4), rgba(139, 92, 246, 0.2));
+    background-image:
+      linear-gradient(var(--glass-medium), var(--glass-medium)),
+      linear-gradient(135deg, rgba(143, 116, 255, 0.4), rgba(139, 92, 246, 0.2));
     background-origin: border-box;
     background-clip: padding-box, border-box;
   }
-  
+
   .gradient-border-cyan {
     position: relative;
     border: 1px solid transparent;
-    background-image: linear-gradient(var(--glass-medium), var(--glass-medium)),
-                      linear-gradient(135deg, rgba(103, 232, 249, 0.4), rgba(34, 211, 238, 0.2));
+    background-image:
+      linear-gradient(var(--glass-medium), var(--glass-medium)),
+      linear-gradient(135deg, rgba(103, 232, 249, 0.4), rgba(34, 211, 238, 0.2));
     background-origin: border-box;
     background-clip: padding-box, border-box;
   }
 
   /* Text effects */
   .text-glow {
-    text-shadow: 0 0 12px currentColor, 0 0 24px rgba(110, 168, 255, 0.3);
+    text-shadow:
+      0 0 12px currentColor,
+      0 0 24px rgba(110, 168, 255, 0.3);
   }
-  
+
   .text-shadow-sm {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   }
-  
+
   .text-shadow-md {
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
   }
@@ -151,7 +156,12 @@
     @apply relative flex items-center justify-center rounded-xl border text-text transition-all duration-300;
     border-color: rgba(100, 116, 139, 0.3);
     background-color: rgba(17, 24, 39, 0.86);
-    background-image: linear-gradient(165deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 46%, rgba(0, 0, 0, 0.24) 100%);
+    background-image: linear-gradient(
+      165deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.01) 46%,
+      rgba(0, 0, 0, 0.24) 100%
+    );
     box-shadow: var(--shadow-md), var(--inner-glow-light);
   }
 
@@ -172,16 +182,16 @@
   .hover-lift {
     @apply transition-all duration-300 ease-out;
   }
-  
+
   .hover-lift:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
   }
-  
+
   .hover-lift-lg {
     @apply transition-all duration-300 ease-out;
   }
-  
+
   .hover-lift-lg:hover {
     transform: translateY(-4px) scale(1.02);
     box-shadow: var(--shadow-xl);
@@ -208,5 +218,72 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
+  }
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Hide interactive elements */
+  button,
+  .hover-lift,
+  nav,
+  footer,
+  #scroll-to-top,
+  [role="navigation"],
+  [aria-label="Keyboard shortcuts"] {
+    display: none !important;
+  }
+
+  /* Simplify glassmorphism effects */
+  .glass-light,
+  .glass-medium,
+  .glass-heavy {
+    background: white !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+
+  /* Remove shadows and glows */
+  .elevated-sm,
+  .elevated-md,
+  .elevated-lg,
+  .elevated-xl,
+  .elevated-2xl,
+  .glow-blue,
+  .glow-violet {
+    box-shadow: none !important;
+  }
+
+  /* Ensure readable text */
+  h1,
+  h2,
+  h3 {
+    color: black !important;
+    page-break-after: avoid;
+  }
+
+  p {
+    color: #333 !important;
+  }
+
+  /* Page breaks */
+  section {
+    page-break-inside: avoid;
+  }
+
+  /* Simplify animations */
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }
